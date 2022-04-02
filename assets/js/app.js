@@ -16,6 +16,9 @@ $(document).ready(() => {
   buscar.click(() => {
     const superId = input.val();
     console.log(superId);
+    if(isNaN(superId)){
+      alert("No es un numero");
+    }
     $.ajax(
       `https://www.superheroapi.com/api.php/503190218081610/${superId}`
     ).done((data) => {
